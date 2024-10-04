@@ -7,6 +7,7 @@ import java.util.Date;
 import org.testng.annotations.Test;
 
 public class CreateFile {
+	String userHome = System.getProperty("user.home");
 	//File folder = new File("D:\\Automation\\GoogleTags\\Reports");
 	File file;
 	@Test 
@@ -16,7 +17,7 @@ public class CreateFile {
 			Date date = new Date();
 			 String date1= date.toString().replace(" ", "-").replace(":", "-");
             // Create a File object
-             file = new File("D:\\Automation\\GoogleTags\\Reports\\"+date1+".html");
+             file = new File(userHome+"\\git\\gtautomation\\GoogleTags\\Reports\\"+date1+".html");
             
             // Check if the file already exists
             if (file.createNewFile()) {

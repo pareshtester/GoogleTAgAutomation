@@ -5,10 +5,12 @@ import java.io.File;
 import org.testng.annotations.Test;
 
 public class deletefiles {
-	File folder = new File("D:\\Automation\\GoogleTags\\Reports");
+	String userHome = System.getProperty("user.home");
+	
+	File folder = new File(userHome+"\\git\\gtautomation\\GoogleTags\\Reports");
 	@Test
 	public void delete(){
-
+		System.out.println(userHome);
     // Get a list of all files in the folder
     File[] files = folder.listFiles();
 
